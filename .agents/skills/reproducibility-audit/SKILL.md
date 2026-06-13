@@ -14,5 +14,10 @@ Checklist:
 8. CI passes.
 9. AI usage disclosed.
 10. Private data excluded.
+11. Agent workflow stage gates documented in configs/agent_workflow.yaml.
+12. Experiments recorded in results/run_registry.yml with command, config, inputs, environment, seed, git commit, and outputs.
+13. Internal review reports generated before submission.
+
+Run make review and make audit when possible.
 
 Output docs/reproducibility_audit.md and docs/submission_checklist.md.

@@ -2,8 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import pandas as pd
-
 from bioinfo_scientist.plotting import plot_qc_summary
 from bioinfo_scientist.qc import load_metadata, summarize_qc
 

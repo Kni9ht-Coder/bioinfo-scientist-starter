@@ -1,0 +1,81 @@
+workflow:
+  mode: human_supervised
+  borrowed_principles:
+    - idea_bank
+    - staged_experiment_execution
+    - run_registry
+    - internal_review_loop
+  forbidden_modes:
+    - fully_autonomous_submission
+    - unsandboxed_llm_written_code_execution
+    - manuscript_claims_without_evidence
+
+stages:
+  idea:
+    required_files:
+      - docs/idea_bank.yml
+      - docs/project_brief.md
+    human_approval_required: true
+    allowed_actions:
+      - propose
+      - rank
+      - audit_novelty
+    forbidden_actions:
+      - claim_results
+
+  protocol:
+    required_files:
+      - docs/experiment_protocol.md
+      - configs/experiment.yaml
+    human_approval_required: true
+    allowed_actions:
+      - define_labels
+      - define_splits
+      - define_baselines
+      - define_stop_criteria
+
+  code:
+    max_task_scope: one_module_or_script
+    require_tests: true
+    require_command_logging: true
+    first_tasks:
+      - peptide_schema
+      - toy_dataset
+      - validation_script
+      - preprocessing
+      - feature_extraction
+      - baseline_model
+      - dataset_figure
+    deferred_tasks:
+      - generative_model
+      - docking
+
+  results:
+    required_files:
+      - results/run_registry.yml
+      - results/claim_ledger.yml
+    require_generated_outputs: true
+    allowed_claim_statuses:
+      - draft
+      - verified
+      - rejected
+
+  manuscript:
+    require_claim_ledger: true
+    require_verified_evidence_for_results: true
+    results_without_evidence: forbidden
+    allowed_before_results:
+      - introduction_skeleton
+      - methods_plan
+      - results_placeholders
+      - discussion_limitations
+
+  review:
+    required_commands:
+      - make review
+      - make audit
+    required_outputs:
+      - docs/internal_review.md
+      - docs/overclaiming_audit.md
+      - docs/figure_review.md
+      - docs/reproducibility_audit.md

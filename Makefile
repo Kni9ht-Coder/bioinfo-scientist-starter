@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 export PYTHONPATH := src:$(PYTHONPATH)
 
-.PHONY: lint format test smoke snakemake-dry snakemake-run figures audit paper-html paper-pdf mlflow clean
+.PHONY: lint format test smoke snakemake-dry snakemake-run figures audit review review-claims review-manuscript review-figures paper-html paper-pdf mlflow clean
 
 lint:
 	ruff check src tests scripts
@@ -30,6 +30,17 @@ audit:
 	python scripts/audit_claims.py
 	python scripts/audit_citations.py
 	python scripts/audit_reproducibility.py
+
+review: review-claims review-manuscript review-figures audit
+
+review-claims:
+	python scripts/review_claims.py
+
+review-manuscript:
+	python scripts/review_manuscript.py
+
+review-figures:
+	python scripts/review_figures.py
 
 paper-html:
 	quarto render manuscript/main.qmd --to html

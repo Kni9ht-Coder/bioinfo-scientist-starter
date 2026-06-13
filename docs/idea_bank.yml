@@ -1,0 +1,20 @@
+ideas:
+  - id: I001
+    title: "TODO: anti-biofilm antimicrobial peptide prioritization workflow"
+    short_hypothesis: "TODO: define the computational hypothesis before implementation."
+    biological_question: "TODO: define the biological question."
+    computational_question: "TODO: define the computational question."
+    candidate_data_sources:
+      - "TODO: public database or literature source"
+    minimum_experiments:
+      - "TODO: data schema and validation"
+      - "TODO: baseline model"
+      - "TODO: leakage-aware evaluation"
+    novelty_status: unchecked
+    feasibility_status: unchecked
+    risk_summary:
+      - "TODO: label quality risk"
+      - "TODO: leakage risk"
+      - "TODO: overclaiming risk"
+    human_decision: pending
+    decision_rationale: "TODO: human approval required before experiments."

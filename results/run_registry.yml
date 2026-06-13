@@ -1,0 +1,17 @@
+runs:
+  - run_id: R000
+    status: placeholder
+    purpose: "Template entry showing required provenance fields."
+    command: "TODO"
+    config:
+      - configs/experiment.yaml
+    input_data:
+      - path: "TODO"
+        version_or_hash: "TODO"
+    software_environment:
+      - envs/core.yml
+    seed: "TODO"
+    git_commit: "TODO"
+    output_location: "TODO"
+    claim_ledger_updates: []
+    notes: "Replace this placeholder with real run records before verifying claims."
