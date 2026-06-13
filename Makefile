@@ -6,6 +6,7 @@ export PYTHONPATH := src:$(PYTHONPATH)
 lint:
 	ruff check src tests scripts
 	black --check src tests scripts
+	mypy src
 
 format:
 	ruff check src tests scripts --fix
@@ -49,6 +50,7 @@ paper-pdf:
 	quarto render manuscript/main.qmd --to pdf
 
 mlflow:
+	mkdir -p results/mlflow
 	mlflow ui --backend-store-uri results/mlflow
 
 clean:
