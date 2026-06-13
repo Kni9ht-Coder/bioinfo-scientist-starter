@@ -40,6 +40,10 @@ mlruns/
 results/mlflow/
 results/logs/*.log
 
+# Literature raw API dumps (regenerable; metadata only, no large files)
+literature/raw/*
+!literature/raw/.gitkeep
+
 # Regenerable analysis outputs
 results/figures/*
 results/tables/*
