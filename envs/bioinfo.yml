@@ -1,0 +1,25 @@
+name: paper-bioinfo
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - fastqc
+  - multiqc
+  - samtools
+  - bcftools
+  - bedtools
+  - bwa
+  - bowtie2
+  - hisat2
+  - star
+  - salmon
+  - kallisto
+  - subread
+  - sra-tools
+  - seqkit
+  - trim-galore
+  - cutadapt
+  - nextflow
+  - nf-core
+  - snakemake

@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "openai.chatgpt",
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-containers",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "ms-azuretools.vscode-docker",
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml",
+    "quarto.quarto",
+    "james-yu.latex-workshop",
+    "snakemake.snakemake-lang"
+  ]
+}

@@ -1,0 +1,36 @@
+configfile: "configs/project.yaml"
+
+rule all:
+    input:
+        "results/tables/qc_summary.csv",
+        "results/figures/fig1_qc.pdf"
+
+rule qc_summary:
+    input:
+        metadata="data/metadata/samples.csv"
+    output:
+        "results/tables/qc_summary.csv"
+    log:
+        "results/logs/qc_summary.log"
+    shell:
+        """
+        python scripts/qc_summary.py \
+          --metadata {input.metadata} \
+          --out {output} \
+          > {log} 2>&1
+        """
+
+rule fig1_qc:
+    input:
+        "results/tables/qc_summary.csv"
+    output:
+        "results/figures/fig1_qc.pdf"
+    log:
+        "results/logs/fig1_qc.log"
+    shell:
+        """
+        python scripts/plot_qc.py \
+          --input {input} \
+          --out {output} \
+          > {log} 2>&1
+        """

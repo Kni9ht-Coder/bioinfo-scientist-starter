@@ -1,0 +1,49 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.venv/
+
+# Data: keep structure but not raw files
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Bioinfo large files
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+*.sam
+*.cram
+*.crai
+*.vcf
+*.vcf.gz
+*.h5ad
+*.loom
+*.rds
+*.RData
+
+# MLflow / logs / artifacts
+mlruns/
+results/mlflow/
+results/logs/*.log
+
+# Quarto / LaTeX artifacts
+/.quarto/
+manuscript/_site/
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc

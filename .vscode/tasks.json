@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "make test", "type": "shell", "command": "make test", "group": "test"},
+    {"label": "make smoke", "type": "shell", "command": "make smoke"},
+    {"label": "make snakemake-dry", "type": "shell", "command": "make snakemake-dry"},
+    {"label": "make audit", "type": "shell", "command": "make audit"}
+  ]
+}

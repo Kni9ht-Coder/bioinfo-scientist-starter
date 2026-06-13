@@ -1,0 +1,27 @@
+name: paper-aidd-gpu
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - rdkit
+  - biopython
+  - jupyterlab
+  - ipykernel
+  - dvc
+  - mlflow
+  - pip:
+      - PyTDC
+      - deepchem
+      - lightning
+      - transformers
+      - accelerate
+      - einops
+# After creating this env on the WSL GPU machine, install PyTorch using the current command
+# from https://pytorch.org/get-started/locally/ for Linux + Pip + CUDA.

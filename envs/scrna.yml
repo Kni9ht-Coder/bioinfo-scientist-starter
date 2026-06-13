@@ -1,0 +1,22 @@
+name: paper-scrna
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - scanpy
+  - anndata
+  - leidenalg
+  - louvain
+  - harmonypy
+  - scrublet
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - jupyterlab
+  - ipykernel
+  - pip:
+      - scvi-tools

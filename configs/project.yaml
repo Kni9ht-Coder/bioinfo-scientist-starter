@@ -1,0 +1,12 @@
+project:
+  name: bioinfo-scientist-paper
+  organism: human
+  reference_genome: TODO
+  annotation_version: TODO
+  target_journal: TODO
+
+paths:
+  metadata: data/metadata/samples.csv
+  results: results
+  figures: results/figures
+  tables: results/tables

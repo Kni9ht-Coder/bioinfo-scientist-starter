@@ -1,0 +1,11 @@
+experiment:
+  name: smoke_qc
+  seed: 42
+  task: toy_bioinformatics_qc
+  primary_metric: toy_score
+  split_strategy: TODO
+  leakage_checks:
+    - sample_id_unique
+    - patient_level_split_if_applicable
+  statistics:
+    multiple_testing: benjamini_hochberg_if_applicable

@@ -1,0 +1,43 @@
+name: paper-core
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pip
+  - git
+  - git-lfs
+  - make
+  - pandoc
+  - quarto
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - pyarrow
+  - pyyaml
+  - typer
+  - rich
+  - pydantic
+  - jupyterlab
+  - ipykernel
+  - nbconvert
+  - nbformat
+  - papermill
+  - biopython
+  - snakemake
+  - dvc
+  - mlflow
+  - pytest
+  - pytest-cov
+  - ruff
+  - black
+  - mypy
+  - pre-commit
+  - pip:
+      - openai
+      - openai-agents
+      - python-dotenv
+      - nbstripout

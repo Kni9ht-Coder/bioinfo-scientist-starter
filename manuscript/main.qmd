@@ -1,0 +1,45 @@
+---
+title: "BioInfo-Scientist Manuscript Draft"
+author:
+  - name: "Your Name"
+    affiliations: [1]
+affiliations:
+  - id: 1
+    name: "Your Institution"
+format:
+  html:
+    toc: true
+  pdf:
+    documentclass: article
+bibliography: ../literature/bib/library.bib
+---
+
+# Abstract
+
+TODO
+
+# Introduction
+
+{{< include sections/introduction.qmd >}}
+
+# Methods
+
+{{< include sections/methods.qmd >}}
+
+# Results
+
+{{< include sections/results.qmd >}}
+
+# Discussion
+
+{{< include sections/discussion.qmd >}}
+
+# Data and code availability
+
+TODO
+
+# AI use disclosure
+
+AI-assisted tools were used for code generation, debugging, workflow organization, internal consistency checks, and language editing. All scientific claims, analyses, citations, figures, and conclusions were verified by the human authors.
+
+# References

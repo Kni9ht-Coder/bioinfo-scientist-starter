@@ -1,0 +1,10 @@
+{
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"],
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "jupyter.askForKernelRestart": false,
+  "latex-workshop.latex.autoBuild.run": "never"
+}

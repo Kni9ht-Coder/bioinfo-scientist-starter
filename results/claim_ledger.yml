@@ -1,0 +1,10 @@
+claims:
+  - id: C000
+    claim: "The starter workflow can generate a toy QC table and figure from sample metadata."
+    type: engineering_smoke_test
+    evidence:
+      - results/tables/qc_summary.csv
+      - results/figures/fig1_qc.pdf
+    status: verified
+    manuscript_location: "Not for scientific manuscript use"
+    caveat: "Toy data only; not a biological result."

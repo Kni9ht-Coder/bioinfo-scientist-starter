@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Setup micromamba
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: envs/core.yml
+          environment-name: paper-core
+          cache-environment: true
+      - name: Lint
+        shell: bash -l {0}
+        run: |
+          conda activate paper-core
+          make lint
+      - name: Test
+        shell: bash -l {0}
+        run: |
+          conda activate paper-core
+          make test
+      - name: Smoke
+        shell: bash -l {0}
+        run: |
+          conda activate paper-core
+          make smoke
+      - name: Snakemake dry-run
+        shell: bash -l {0}
+        run: |
+          conda activate paper-core
+          make snakemake-dry
